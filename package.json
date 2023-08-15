@@ -1,0 +1,37 @@
+{
+  "name": "boilerplate-package",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "types": "dist/esm/index.d.ts",
+  "module": "dist/esm/index.mjs",
+  "main": "dist/cjs/index.cjs",
+  "exports": {
+    ".": {
+      "types": "./dist/esm/index.d.ts",
+      "import": "./dist/esm/index.mjs",
+      "require": "./dist/cjs/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "clean": "clear-package-json package.json -o clean-package.json --fields scripts && move clean-package.json package.json"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.9",
+    "clean-publish": "^4.2.0",
+    "rollup-plugin-dts": "^5.3.1",
+    "rollup-plugin-esbuild": "^5.0.0",
+    "typescript": "^5.1.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/satyam-bhadoria/boilerplate-package.git"
+  },
+  "author": "Satyam Bhadoria",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/satyam-bhadoria/boilerplate-package/issues"
+  },
+  "homepage": "https://github.com/satyam-bhadoria/boilerplate-package#readme"
+}
