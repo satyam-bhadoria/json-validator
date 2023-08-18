@@ -12,9 +12,9 @@ This is utility package that helps in validating the json schema. It uses ajv pa
 ## Installation
 
 ```bash
-  npm i @sb/json-validator
+  npm i json-validator-util
   OR
-  yarn @sb/json-validator
+  yarn json-validator-util
 ```
     
 ## Usage/Examples
@@ -23,7 +23,7 @@ This is utility package that helps in validating the json schema. It uses ajv pa
 
 ```javascript
 // validating through schema directly
-import { validator } from '@sb/json-validator';
+import { validator } from 'json-validator-util';
 
 const response = validator.validate(payload, jsonSchema);
 if(!response.isValid) {
@@ -33,7 +33,7 @@ if(!response.isValid) {
 
 ```javascript
 // validating through schema filename
-import { validator } from '@sb/json-validator';
+import { validator } from 'json-validator-util';
 
 validator.initialize({
     schemaPath: 'relative/path/to/folder'
@@ -57,7 +57,7 @@ if(!response.isValid) {
 ### Example
 
 ```javascript
-import { validator } from '@sb/json-validator';
+import { validator } from 'json-validator-util';
 
 const payload = {
     foo: 123,
