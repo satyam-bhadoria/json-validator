@@ -1,8 +1,10 @@
 {
-  "name": "boilerplate-package",
-  "type": "module",
+  "name": "json-validator-util",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is utility package that helps in validating the json schema",
+  "files": [
+    "dist"
+  ],
   "types": "dist/esm/index.d.ts",
   "module": "dist/esm/index.mjs",
   "main": "dist/cjs/index.cjs",
@@ -13,25 +15,19 @@
       "require": "./dist/cjs/index.cjs"
     }
   },
-  "scripts": {
-    "build": "rollup -c",
-    "clean": "clear-package-json package.json -o clean-package.json --fields scripts && move clean-package.json package.json"
-  },
-  "devDependencies": {
-    "@types/node": "^20.4.9",
-    "clean-publish": "^4.2.0",
-    "rollup-plugin-dts": "^5.3.1",
-    "rollup-plugin-esbuild": "^5.0.0",
-    "typescript": "^5.1.6"
+  "dependencies": {
+    "ajv": "^8.12.0",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/satyam-bhadoria/boilerplate-package.git"
+    "url": "git+https://github.com/satyam-bhadoria/json-validator.git"
   },
   "author": "Satyam Bhadoria",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/satyam-bhadoria/boilerplate-package/issues"
+    "url": "https://github.com/satyam-bhadoria/json-validator/issues"
   },
-  "homepage": "https://github.com/satyam-bhadoria/boilerplate-package#readme"
+  "homepage": "https://github.com/satyam-bhadoria/json-validator#readme"
 }
